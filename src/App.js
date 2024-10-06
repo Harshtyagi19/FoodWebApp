@@ -1,12 +1,15 @@
-import './App.css';
+import { Profiler } from "react";
+import Body from "./components/Body"
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </div>
+    <Provider store={appStore}>
+      <Body/>
+    </Provider>
+  
   );
 }
 
